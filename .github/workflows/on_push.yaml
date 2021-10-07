@@ -10,5 +10,3 @@ jobs:
     steps: 
     
     - uses: actions/checkout@master
-
-    - run: cat readme.md
