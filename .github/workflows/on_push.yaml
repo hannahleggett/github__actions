@@ -21,6 +21,7 @@ jobs:
       run: |
         npm install -g sharp-cli
         sharp --input **/*.jpg --output output/{name}.webp --format "webp"
+        sharp --input **/*.png --output output/{name}.webp --format "webp"
 
     - name: Save webp
       uses: actions/upload-artifact@v2
