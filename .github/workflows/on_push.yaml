@@ -11,6 +11,11 @@ jobs:
     
     - uses: actions/checkout@master
 
-    - name: 
+    - name: usenode
+      uses: actions/setup-node@v2
+      with: 
+        node-version: 14.x
+
+    - name: sharp
       run: |
-        cat readme.md
+        npm install -g sharp-cli
