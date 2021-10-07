@@ -1,7 +1,8 @@
-name: first
+name: webp
 
 on: 
   workflow_dispatch:
+  push:
 
 jobs: 
   demo: 
@@ -20,3 +21,9 @@ jobs:
       run: |
         npm install -g sharp-cli
         sharp --input **/*.jpg --output output/{name}.webp --format "webp"
+
+    - name: Save webp
+      uses: actions/upload-artifact@v2
+      with:
+        name: webp
+        path: output/*.webp
